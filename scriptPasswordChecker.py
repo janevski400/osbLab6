@@ -3,7 +3,7 @@ import subprocess
 userHash = "64cc504a93c31c8ef88999b63c5442f50cd3f156dd0ece551006996a7a1f499f" # tuka se vnesuva hash vrednost koja sakame da ja dobieme
 
 def sha256test(password):   #funkcija koja proveruva dali passwordot odgovara na dadenata hash vrednost dobiena od fajlot poraka.txt
-    output = subprocess.run(['sudo', 'openssl', 'dgst' , '-sha256','-hmac', password, 'poraka.txt'], capture_output=True, text=True)
+    output = subprocess.run(['sudo', 'openssl', 'dgst' , '-sha256','-hmac', password, 'poraka.txt'], capture_output=True, text=True) #fajlot koj go proveruvame mora da go nosi imeto poraka.txt
     sha256_value = output.stdout[25:]   #brishenje na nepotrebnite karakteri za da se dobie samo hashot
     sha256_value = sha256_value.rstrip('\n')    #brishenje na \n na krajot na hashot
     if sha256_value==userHash:
