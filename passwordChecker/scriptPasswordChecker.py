@@ -22,3 +22,4 @@ for line in password_file:
 print("Ne e pronajden tochen password.")
 
 #za predvremeno zapiranje na skriptata pritisnete ctrl+z
+#skriptata gi proveruva site lozinki od fajlot password.txt dali davaat ist hash output so pre-definiraniot hash output na linija broj 3
