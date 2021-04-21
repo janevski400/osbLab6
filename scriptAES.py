@@ -16,8 +16,8 @@ for line in password_file:
     if aesTest(line.rstrip('\n'))==1:   
         print("Passwordot e: "+line.rstrip('\n'))
         exit()       
-        subprocess.run('rm output.txt')
     else:
         print(line.rstrip('\n') +" ne e tochniot password.")
+        subprocess.run('rm output.txt')
 
 print("Ne e pronajden tochen password.")
